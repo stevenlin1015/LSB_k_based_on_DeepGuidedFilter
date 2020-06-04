@@ -22,23 +22,26 @@ see [DeepGuidedFilter](https://github.com/wuhuikai/DeepGuidedFilter)
 
 <h3>使用Cover Modification</h3>
 
+![](https://github.com/stevenlin1015/LSB_k_based_on_DeepGuidedFilter/blob/master/README%20image/cover_modification_approach.JPG "cover_modification_approach")
+
   1. 下載本專案 `git clone https://github.com/stevenlin1015/LSB_k_based_on_DeepGuidedFilter.git`
 
   2. 使用Spyder開啟 `LSB_k_based_on_DeepGuidedFilter/ImageProcessing/DeepGuidedFilteringNetwork/`內的 **predict_cover_modification_ratio.py**、**cover_modification.py** 兩支程式
 
-  3. 在 **predict_cover_modification_ratio.py** 按 **Ctrl + F6** 快捷鍵，要來配置執行參數
-  * General settings內設定Command line options為 `--task auto_ps --img_path ../../images/auto_ps.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64`，按下OK
+  3. 在 **predict_cover_modification_ratio.py** 按 **Ctrl + F6** 快捷鍵，要來配置執行參數: General settings內設定Command line options為 `--task auto_ps --img_path ../../images/auto_ps.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64`，按下OK。
 
 
-  4.執行 **predict_cover_modification_ratio.py**，會在`LSB_k_based_on_DeepGuidedFilter/ImageProcessing/DeepGuidedFilteringNetwork/`下產生一張名為 **cover images.bmp** 的BMP影像，這張影像是我們的cover image。
+  4. 執行 **predict_cover_modification_ratio.py**，會在`LSB_k_based_on_DeepGuidedFilter/ImageProcessing/DeepGuidedFilteringNetwork/`下產生一張名為 **cover images.bmp** 的BMP影像，這張影像是我們的cover image。
 
-  5.接著進入 **cover_modification.py** ，找到 **embedding_rate** 變數，這個是嵌入秘訊的嵌入率，可以設定為0~1之間的實數(e.g. 若只想嵌入10%的秘訊到影像中，則embedding_rate = 0.1)
+  5. 接著進入 **cover_modification.py** ，找到 **embedding_rate** 變數，這個是嵌入秘訊的嵌入率，可以設定為0~1之間的實數(e.g. 若只想嵌入10%的秘訊到影像中，則embedding_rate = 0.1)
 
-  6.設定完 **embedding_rate** 後，執行 **cover_modification.py** 。
+  6. 設定完 **embedding_rate** 後，執行 **cover_modification.py** 。
 
-  7.會在 `LSB_k_based_on_DeepGuidedFilter/ImageProcessing/DeepGuidedFilteringNetwork/` 內，找到檔名後綴為 **xxx_stego.bmp** 的BMP影像，這個就是所產生的stego image。
+  7. 會在 `LSB_k_based_on_DeepGuidedFilter/ImageProcessing/DeepGuidedFilteringNetwork/` 內，找到檔名後綴為 **xxx_stego.bmp** 的BMP影像，這個就是所產生的stego image。
 
 <h3>使用Cover Synthesis</h3>
+
+![](https://github.com/stevenlin1015/LSB_k_based_on_DeepGuidedFilter/blob/master/README%20image/cover_synthesis_approach.JPG "cover_synthesis_approach")
 
   1. 下載本專案 `git clone https://github.com/stevenlin1015/LSB_k_based_on_DeepGuidedFilter.git`
 

@@ -1,0 +1,22 @@
+1.cover modification approach
+
+method:在/images資料夾讀入照片(host image)，會先將.jpg檔轉成.bmp檔，並用.bmp影像(在/images資料夾)做深度學習，經由神經網路產生完結果圖片(cover image.bmp)，再由cover image透過執行cover_modification.py，並設定embedding_rate，做LSB-k產生密訊圖片(stego image)
+流程:host -> cover -> stego
+執行步驟:執行predict_cover_modification_ratio.py，再執行cover_modification.py。
+
+指令:
+	- predict_cover_modification_ratio.py
+		--task auto_ps --img_path ../../images/auto_ps.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+
+=================================================================================================================================
+
+2.cover synthesis approach
+
+method:在/images資料夾讀入照片(host image)，會先將.jpg檔轉成.bmp檔，並用.bmp影像(在/images資料夾)做深度學習，經由神經網路產生完結果圖片(xxx.bmp)，接著設定predict_lsb_ratio.py內的embedding_rate，直接做LSB-k產生密訊圖片(stego image)
+流程:host -> stego
+執行步驟:執行predict_lsb_ratio.py。
+
+指令:
+	- predict_lsb_ratio.py
+		--task auto_ps --img_path ../../images/auto_ps.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64

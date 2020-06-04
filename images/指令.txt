@@ -1,0 +1,47 @@
+auto_ps
+python predict.py  --task auto_ps --img_path ../../images/auto_ps.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+style_transfer 
+python predict.py  --task style_transfer --img_path ../../images/auto_ps.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+
+multi_scale_detail_manipulation
+python predict.py  --task multi_scale_detail_manipulation --img_path ../../images/auto_ps.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+l0_smooth
+python predict.py  --task l0_smooth --img_path ../../images/auto_ps.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+non_local_dehazing
+python predict.py  --task non_local_dehazing --img_path ../../images/auto_ps.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+
+=======================cover modification==================================================
+
+auto_ps
+python predict_cover_modification.py  --task auto_ps --img_path ../../images/auto_ps.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+python predict_cover_modification.py  --task auto_ps --img_path ../../images/depth.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+python predict_cover_modification.py  --task auto_ps --img_path ../../images/detail_manipulation.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+
+=======================cover modification with ratio==================================================
+
+auto_ps
+python predict_cover_modification_ratio.py  --task auto_ps --img_path ../../images/auto_ps.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+python predict_cover_modification_ratio.py  --task auto_ps --img_path ../../images/depth.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+python predict_cover_modification_ratio.py  --task auto_ps --img_path ../../images/detail_manipulation.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+
+
+=======================lsb with ratio==================================================
+
+
+auto_ps
+python predict_lsb_ratio.py  --task auto_ps --img_path ../../images/auto_ps.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+python predict_lsb_ratio.py  --task auto_ps --img_path ../../images/depth.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
+
+python predict_lsb_ratio.py  --task auto_ps --img_path ../../images/detail_manipulation.jpg --save_folder . --model deep_guided_filter_advanced --low_size 64
